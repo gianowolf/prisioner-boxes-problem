@@ -1,3 +1,3 @@
-module github.com/learning-go-book/package_example
+module github.com/gianowolf/prisioner-boxes-problem
 
 go 1.19
