@@ -3,8 +3,25 @@ package boxesexperiment_test
 import (
 	"fmt"
 
-	"github.com/gianowolf/prisioner-boxes-problem/slices_manager"
+	slicesmanager "github.com/gianowolf/prisioner-boxes-problem/slices_manager"
 )
+
+type Experiment struct {
+	id      int
+	key     string
+	boxes   []int
+	escaped bool
+}
+
+func CreateExperiment(number_of_prisioners int) Experiment {
+
+	return Experiment{
+		id:      1,
+		key:     "abcdefgh",
+		escaped: false,
+		boxes:   slicesmanager.NewUnorderedSlice(number_of_prisioners),
+	}
+}
 
 func NewPrisionersExperiment(number_of_prisioners int) {
 
@@ -14,7 +31,7 @@ func NewPrisionersExperiment(number_of_prisioners int) {
 
 		fmt.Println()
 		fmt.Println("Prisionero ", prisioner)
-		max_attemps := size / 2
+		max_attemps := number_of_prisioners / 2
 		attemp := 1
 
 		paper := boxes[prisioner]

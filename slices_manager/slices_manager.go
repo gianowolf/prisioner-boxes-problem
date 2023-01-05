@@ -1,4 +1,4 @@
-package slicesmanager_test
+package slicesmanager
 
 import (
 	"math/rand"
